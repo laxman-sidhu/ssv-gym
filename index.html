@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>SSV Gym | Shree Siddhi Vinayak Gym</title>
+  <!-- TODO (SEO): add your locality/city to this description once confirmed. -->
+  <meta name="description" content="SSV Gym (Shree Siddhi Vinayak Gym): main gym, CrossFit / functional training area and steam room. See facilities, membership plans, trainers, photos and contact details.">
+  <meta name="theme-color" content="#0D0F0E">
+
+  <!-- Open Graph. TODO: replace YOUR-DOMAIN and add a 1200x630 JPG at assets/og-image.jpg -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SSV Gym">
+  <meta property="og:title" content="SSV Gym | Shree Siddhi Vinayak Gym">
+  <meta property="og:description" content="Main gym, CrossFit and steam room. Facilities, membership plans, trainers and contact details.">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:url" content="https://YOUR-DOMAIN/">
+  <meta property="og:image" content="https://YOUR-DOMAIN/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- <link rel="canonical" href="https://YOUR-DOMAIN/">  enable once the live URL is known -->
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://script.google.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- LocalBusiness structured data. YOUR_* placeholders are replaced/removed at runtime
+       from the CMS; for best SEO also type the confirmed values here. -->
+  <script type="application/ld+json" id="ld-business">
+  {
+    "@context": "https://schema.org",
+    "@type": "ExerciseGym",
+    "name": "SSV Gym",
+    "alternateName": "Shree Siddhi Vinayak Gym",
+    "url": "https://YOUR-DOMAIN/",
+    "telephone": "YOUR_PHONE_NUMBER",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "YOUR_STREET_ADDRESS",
+      "addressLocality": "YOUR_CITY",
+      "addressRegion": "YOUR_STATE",
+      "postalCode": "YOUR_PIN_CODE",
+      "addressCountry": "IN"
+    },
+    "openingHours": "YOUR_OPENING_HOURS e.g. Mo-Sa 06:00-22:00",
+    "hasMap": "YOUR_GOOGLE_MAPS_URL",
+    "sameAs": ["YOUR_INSTAGRAM_URL"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="#home" aria-label="SSV Gym, back to top">
+        <span class="logo__bar" aria-hidden="true"></span><span class="logo__word">SSV</span><span class="logo__gym">Gym</span>
+      </a>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#home">Home</a></li>
+          <li><a class="nav__link" href="#about">About</a></li>
+          <li><a class="nav__link" href="#facilities">Facilities</a></li>
+          <li><a class="nav__link" href="#membership">Membership</a></li>
+          <li><a class="nav__link" href="#trainers">Trainers</a></li>
+          <li><a class="nav__link" href="#gallery">Gallery</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+        <a class="btn btn--primary btn--sm nav__cta" href="#membership" data-requires="membership">View membership plans</a>
+      </nav>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero__media media" id="hero-media" data-label="Hero photo"></div>
+      <div class="hero__shade" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <h1 class="hero__title" id="hero-title">
+          <span class="hero__brand"><b data-g="gym_name">SSV Gym</b><span data-g="full_name">Shree Siddhi Vinayak Gym</span></span>
+          <span class="hero__heading" id="hero-heading"><span class="hero__line">Train strong.</span><span class="hero__line">Live strong.</span></span>
+        </h1>
+        <p class="hero__sub" data-g="hero_subtitle">A complete fitness space for strength, conditioning and wellness.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#facilities" data-requires="facilities">View facilities</a>
+          <a class="btn btn--ghost" href="#membership" data-requires="membership">Membership plans</a>
+        </div>
+      </div>
+      <div class="hero__strip">
+        <div class="container">
+          <ul class="facility-strip" data-g-list="facility_strip" aria-label="Areas at SSV Gym"><li>Main Gym</li><li>CrossFit</li><li>Steam Room</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK STATS (values come from the General tab: stat_1_value, stat_1_label, ...) -->
+    <section class="stats" id="stats" aria-label="SSV Gym at a glance">
+      <div class="container">
+        <dl class="stats__grid" id="stats-grid"></dl>
+        <p class="sample-tag">Placeholder figures, editable in the admin panel</p>
+      </div>
+    </section>
+
+    <!-- ANNOUNCEMENTS (hidden automatically when nothing is active) -->
+    <section class="notice" id="announcements" aria-labelledby="notice-title" hidden>
+      <div class="container notice__inner">
+        <h2 class="notice__label" id="notice-title">Announcements</h2>
+        <ul class="notice__list" id="notice-list"></ul>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container about__grid">
+        <div class="about__media reveal">
+          <div class="media media--portrait" id="about-media" data-label="About photo"></div>
+          <p class="about__tag" hidden><strong id="zone-count">3</strong> dedicated areas</p>
+        </div>
+        <div class="about__body reveal">
+          <p class="section-label">About SSV</p>
+          <h2 id="about-title" data-g="about_heading">Shree Siddhi Vinayak Gym</h2>
+          <div class="about__text" id="about-text"><p>SSV Gym is a fitness space focused on strength training, conditioning and overall fitness.</p></div>
+          <ul class="highlights" id="about-highlights"></ul>
+          <div class="about__actions">
+            <a class="btn btn--primary" href="#contact">Contact SSV</a>
+            <a class="text-link" href="#facilities" data-requires="facilities">Explore facilities</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FACILITIES -->
+    <section class="section facilities" id="facilities" aria-labelledby="facilities-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-label">Facilities</p>
+          <h2 id="facilities-title">Strength, conditioning, recovery</h2>
+          <p class="section-head__lead" data-g="facilities_intro">The main gym floor, a CrossFit and functional training zone, and a steam room for recovery.</p>
+          <p class="sample-tag">Stock photos, not SSV</p>
+        </header>
+        <div class="facility-grid reveal" id="facility-grid"></div>
+        <div class="facility-extra" id="facility-extra" hidden>
+          <h3 class="facility-extra__title">Also at SSV</h3>
+          <ul class="facility-extra__list" id="facility-extra-list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEMBERSHIP -->
+    <section class="section plans" id="membership" aria-labelledby="plans-title">
+      <div class="container">
+        <header class="section-head section-head--split reveal">
+          <div>
+            <p class="section-label">Membership</p>
+            <h2 id="plans-title">Membership plans</h2>
+          </div>
+          <div>
+            <p class="section-head__lead">Pick the duration that suits your routine. Tap Enquire to ask about joining.</p>
+            <p class="sample-tag">Sample prices, not SSV's actual fees</p>
+          </div>
+        </header>
+        <div class="plan-board reveal" id="plan-grid"></div>
+        <p class="plans__note">Contact the gym to confirm current fees before joining.</p>
+      </div>
+    </section>
+
+    <!-- TRAINERS -->
+    <section class="section trainers" id="trainers" aria-labelledby="trainers-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-label">Trainers</p>
+          <h2 id="trainers-title">Coaches on the floor</h2>
+          <p class="sample-tag">Sample names and stock photos, not SSV's trainers</p>
+        </header>
+        <div class="trainer-grid reveal" id="trainer-grid"></div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section gallery" id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <header class="section-head section-head--split reveal">
+          <div>
+            <p class="section-label">Gallery</p>
+            <h2 id="gallery-title">Inside SSV</h2>
+          </div>
+          <div>
+            <p class="section-head__lead">Filter by area to see the gym floor, the CrossFit zone, training sessions, equipment and events.</p>
+            <p class="sample-tag">Stock photos, not SSV</p>
+          </div>
+        </header>
+        <div class="gallery__bar">
+          <div class="chips" id="gallery-filters" role="group" aria-label="Filter photos by category"></div>
+          <p class="gallery__count" id="gallery-count" aria-live="polite"></p>
+        </div>
+        <div class="gallery-grid" id="gallery-grid"></div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section reviews" id="testimonials" aria-labelledby="reviews-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-label">Members</p>
+          <h2 id="reviews-title">What members say</h2>
+          <p class="sample-tag">Placeholder reviews, not real member feedback</p>
+        </header>
+        <div class="review-grid reveal" id="review-grid"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact__grid">
+        <div class="contact__info reveal">
+          <p class="section-label">Contact</p>
+          <h2 id="contact-title">Visit <span data-g="gym_name">SSV Gym</span></h2>
+          <p class="contact__full" data-g="full_name">Shree Siddhi Vinayak Gym</p>
+          <p class="sample-tag">Sample contact details</p>
+          <dl class="contact__list">
+            <div><dt>Address</dt><dd data-g-lines="address">Gym address will appear here</dd></div>
+            <div><dt>Phone</dt><dd><a data-link="phone" data-g="phone" href="#contact">+91 XXXXX XXXXX</a></dd></div>
+            <div><dt>WhatsApp</dt><dd><a data-link="whatsapp" data-g="whatsapp" href="#contact">+91 XXXXX XXXXX</a></dd></div>
+            <div><dt>Opening hours</dt><dd data-g-lines="opening_hours">Opening hours will appear here</dd></div>
+            <div><dt>Instagram</dt><dd><a data-link="instagram" id="ig-handle" href="#contact">To be added</a></dd></div>
+          </dl>
+          <div class="contact__actions">
+            <a class="btn btn--primary" data-link="phone" href="#contact">Call now</a>
+            <a class="btn btn--ghost" data-link="whatsapp" href="#contact">WhatsApp</a>
+            <a class="btn btn--ghost" data-link="maps" href="#contact">Get directions</a>
+          </div>
+        </div>
+        <div class="contact__side reveal">
+          <form class="enquiry" id="enquiry-form" novalidate>
+            <h3>Send an enquiry</h3>
+            <p class="enquiry__intro">Leave your name and number with a short question and the gym will get back to you.</p>
+            <div class="field"><label for="enq-name">Name</label><input id="enq-name" name="name" type="text" autocomplete="name" maxlength="80" required></div>
+            <div class="field"><label for="enq-phone">Phone number</label><input id="enq-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="20" required></div>
+            <div class="field"><label for="enq-message">Message <span>(optional)</span></label><textarea id="enq-message" name="message" rows="4" maxlength="1000"></textarea></div>
+            <div class="hp" aria-hidden="true"><label for="enq-website">Leave this empty</label><input id="enq-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+            <button class="btn btn--primary btn--block" type="submit">Send enquiry</button>
+            <p class="enquiry__status" id="enquiry-status" role="status" aria-live="polite"></p>
+          </form>
+          <div class="map" id="map-embed" hidden></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="logo" href="#home" aria-label="SSV Gym, back to top"><span class="logo__bar" aria-hidden="true"></span><span class="logo__word">SSV</span><span class="logo__gym">Gym</span></a>
+        <p class="footer__full" data-g="full_name">Shree Siddhi Vinayak Gym</p>
+        <p class="footer__tagline" data-g="tagline">Train strong. Live strong.</p>
+        <ul class="facility-strip facility-strip--small" data-g-list="facility_strip"><li>Main Gym</li><li>CrossFit</li><li>Steam Room</li></ul>
+      </div>
+      <nav aria-label="Footer">
+        <h2 class="footer__title">Explore</h2>
+        <ul class="footer__nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#facilities">Facilities</a></li>
+          <li><a href="#membership">Membership</a></li>
+          <li><a href="#trainers">Trainers</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="footer__title">Connect</h2>
+        <ul class="footer__links">
+          <li><a data-link="instagram" href="#contact">Instagram</a></li>
+          <li><a data-link="whatsapp" href="#contact">WhatsApp</a></li>
+          <li><a data-link="maps" href="#contact">Google Maps</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>&copy; <span id="year">2026</span> SSV Gym. All rights reserved.</p>
+      <a href="#home">Back to top</a>
+    </div>
+  </footer>
+
+  <nav class="mobile-bar" aria-label="Quick contact">
+    <a class="btn btn--ghost" data-link="phone" href="#contact">Call</a>
+    <a class="btn btn--primary" data-link="whatsapp" href="#contact">WhatsApp</a>
+  </nav>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+    <div class="lightbox__inner">
+      <button class="lb-btn lightbox__close" type="button" data-lb="close" aria-label="Close photo viewer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      <button class="lb-btn lightbox__prev" type="button" data-lb="prev" aria-label="Previous photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <figure class="lightbox__figure">
+        <div id="lb-media"></div>
+        <figcaption><span class="lightbox__count" id="lb-count"></span><strong id="lb-title"></strong><span id="lb-caption"></span></figcaption>
+      </figure>
+      <button class="lb-btn lightbox__next" type="button" data-lb="next" aria-label="Next photo"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </dialog>
+
+  <aside class="sample-notice" id="sample-notice" hidden>
+    <p><strong>Sample content.</strong> Photos are stock images, and prices, figures, names, contact details and reviews are placeholders for now.</p>
+    <button type="button" aria-label="Dismiss notice"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </aside>
+
+  <noscript><p class="noscript">JavaScript is turned off, so some content can't load. Please contact the gym directly.</p></noscript>
+
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

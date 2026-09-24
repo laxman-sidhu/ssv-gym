@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>SSV Admin · Website Manager</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+  <!-- SIGN IN. No password is stored in this file: the backend verifies it. -->
+  <main class="login" id="login-view">
+    <div class="login__card">
+      <div class="brand"><span class="brand__bar" aria-hidden="true"></span><div><strong>SSV Admin</strong><span>Website Manager</span></div></div>
+      <p class="login__intro">Update the SSV Gym website: details, plans, trainers, photos and enquiries.</p>
+      <form id="login-form" novalidate>
+        <label class="field"><span class="field__label">Admin password</span><input type="password" name="password" autocomplete="current-password" required></label>
+        <button class="btn btn--primary btn--block" type="submit">Sign in</button>
+        <p class="login__msg" id="login-msg" role="alert"></p>
+      </form>
+      <div class="login__setup" id="login-setup" hidden>
+        <p><strong>The backend isn't connected yet.</strong> Deploy the Apps Script in <code>apps-script/</code>, then paste its web-app URL into <code>API_URL</code> in <code>js/config.js</code>. The README walks through it.</p>
+        <button class="btn btn--ghost btn--block" type="button" id="demo-btn">Explore with sample data</button>
+        <p class="login__small">Demo mode keeps changes in this tab only. Nothing is saved.</p>
+      </div>
+      <p class="login__foot">Your password is checked by the Google Apps Script backend. It is never stored in this website's code.</p>
+    </div>
+  </main>
+
+  <!-- APP -->
+  <div class="app" id="app" hidden>
+    <aside class="sidebar" id="sidebar" aria-label="Admin navigation">
+      <div class="brand"><span class="brand__bar" aria-hidden="true"></span><div><strong>SSV Admin</strong><span>Website Manager</span></div></div>
+      <nav class="sidebar__nav">
+        <a href="#dashboard" data-view="dashboard">Dashboard</a>
+        <p class="sidebar__group">Website content</p>
+        <a href="#general" data-view="general">General information</a>
+        <a href="#facilities" data-view="facilities">Facilities</a>
+        <a href="#plans" data-view="plans">Membership plans</a>
+        <a href="#trainers" data-view="trainers">Trainers</a>
+        <a href="#gallery" data-view="gallery">Gallery</a>
+        <a href="#testimonials" data-view="testimonials">Testimonials</a>
+        <a href="#announcements" data-view="announcements">Announcements</a>
+        <p class="sidebar__group">Members &amp; setup</p>
+        <a href="#enquiries" data-view="enquiries">Enquiries <span class="nav-badge" id="nav-leads-badge" hidden></span></a>
+        <a href="#settings" data-view="settings">Settings</a>
+      </nav>
+      <div class="sidebar__foot">
+        <a class="btn btn--ghost btn--sm" href="index.html" target="_blank" rel="noopener">View website</a>
+        <button class="btn btn--ghost btn--sm" type="button" id="logout-btn">Sign out</button>
+      </div>
+    </aside>
+    <div class="scrim" id="scrim"></div>
+
+    <div class="main">
+      <header class="topbar">
+        <button class="sidebar-toggle" id="sidebar-toggle" type="button" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2"/></svg>
+        </button>
+        <h1 id="view-title" tabindex="-1">Dashboard</h1>
+        <div class="topbar__right">
+          <span class="conn" id="conn-status"></span>
+          <button class="btn btn--ghost btn--sm" type="button" id="refresh-btn">Refresh</button>
+        </div>
+      </header>
+      <p class="demo-banner" id="demo-banner" hidden><strong>Demo mode.</strong> You're looking at sample data. Changes stay in this tab and are not saved to Google Sheets.</p>
+      <section class="view" id="view"></section>
+    </div>
+  </div>
+
+  <!-- ADD / EDIT DIALOG -->
+  <dialog class="modal" id="modal" aria-labelledby="modal-title">
+    <form class="modal__form" id="modal-form" method="dialog" novalidate>
+      <header class="modal__head">
+        <h2 id="modal-title">Edit</h2>
+        <button class="icon-btn" type="button" data-close aria-label="Close">&times;</button>
+      </header>
+      <div class="modal__body" id="modal-body"></div>
+      <footer class="modal__foot">
+        <button class="btn btn--ghost" type="button" data-close>Cancel</button>
+        <button class="btn btn--primary" type="submit" id="modal-save">Save</button>
+      </footer>
+    </form>
+    <div class="toasts" id="modal-toasts" aria-live="polite"></div>
+  </dialog>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+  <input type="file" id="file-picker" accept="image/jpeg,image/png,image/webp" hidden>
+
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
